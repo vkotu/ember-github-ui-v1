@@ -3,15 +3,18 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   favorites: Ember.inject.service(),
   model(params,transition){
-    return [
+    return new Ember.RSVP.Promise((resolve,reject) => {
+      Ember.run.later(() => {
+        resolve([
 
-      {id: "ember-cli"},
-      {id: "microsoft"},
-      {id: "yahoo"},
-      {id: "netflix"},
-      {id: "facebook"}
-    ];
-
+          {id: "ember-cli"},
+          {id: "microsoft"},
+          {id: "yahoo"},
+          {id: "netflix"},
+          {id: "facebook"}
+        ]) ;
+      },1000);
+    });
 
 },
 
