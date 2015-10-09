@@ -1,2 +1,9 @@
 {{outlet}}
-<p>Issues</p>
+
+<h2>Issues</h2>
+
+{{#each content as |issue|}}
+  <li><a target="_blank" href="{{issue.html_url}}">{{issue.title}}</a></li>
+  {{else}}
+    <h3>No Issues</h3>
+  {{/each}}

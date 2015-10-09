@@ -1,8 +1,15 @@
 {{link-to 'Back to orgs' 'orgs'}}
 
-<h2>Facebook</h2>
+<h2>
 
-<span {{action 'addToRecords' 'Two'}}>CLick Meeee!</span>
+  <img src="{{content.avatar_url}}" height="50" alt="">
+  {{content.name}} <a target='_blank' href={{content.repos_url}}>GitHub</a></h2>
+
+
+  {{outlet}}
+
+
+<span {{action 'addToRecords' 'Two'}}>CLick Meeee! this jus a test</span>
 <ul>
 
   {{#each records as |record|}}
@@ -10,7 +17,5 @@
   {{/each}}
 
 </ul>
-  {{outlet}}
-
 
 

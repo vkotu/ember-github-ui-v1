@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   favorites: Ember.inject.service(),
   model(params,transition){
     return [
-      {id: "emberjs"},
+
       {id: "ember-cli"},
       {id: "microsoft"},
       {id: "yahoo"},

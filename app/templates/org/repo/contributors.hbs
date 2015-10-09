@@ -1,4 +1,9 @@
 
 
 {{outlet}}
-<p>contributors</p>
+
+{{#each content as |contributors|}}
+	<li><img src="{{contributors.avatar_url}}" alt="" height="50"><a target="_blank" href="{{contributors.html_url}}">{{contributors.login}}</a></li>
+{{else}}
+	<h3>No Issues</h3>
+{{/each}}

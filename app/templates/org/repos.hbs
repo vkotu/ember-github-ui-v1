@@ -1,10 +1,10 @@
 
 
-
+{{org.id}} Repos
 <ul >
-	<li> {{link-to 'react' 'org.repo' 'react'}}</li>
-	<li> {{link-to 'watchman' 'org.repo' 'watchman'}}</li>
-	<li> {{link-to 'react-native' 'org.repo' 'react-native'}}</li>
+    {{#each content as |repo|}}
+	<li> {{link-to repo.id 'org.repo' repo.id}}</li>
+	{{/each}}
 </ul>
 
 {{outlet}}
