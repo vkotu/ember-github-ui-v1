@@ -2,8 +2,15 @@
 
 <h2>Facebook</h2>
 
+<span {{action 'addToRecords' 'Two'}}>CLick Meeee!</span>
+<ul>
 
-{{outlet}}
+  {{#each records as |record|}}
+	  <li>{{record.id}}</li>
+  {{/each}}
+
+</ul>
+  {{outlet}}
 
 
 

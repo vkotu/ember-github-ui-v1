@@ -1,10 +1,10 @@
 
-<h1>My Favourate ORGS</h1>
+<h1>My Favourite ORGS</h1>
 
 <ul>
 
     {{#each content as |org|}}
-		    <li> {{link-to org.id 'org' org.id}} </li>
+		  <li>  <span {{action 'addToFav' org}}> favorite</span> {{link-to org.id 'org' org.id}} </li>
       {{else}}
       <h1>list is empty</h1>
       {{/each}}
