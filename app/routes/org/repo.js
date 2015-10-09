@@ -12,6 +12,12 @@ export default Ember.Route.extend({
       return raw;
     });
 
+    //return Ember.RSVP.hash({
+    //  issues:  $.get(`https://api.github.com/repos/${orgName}/${repoName}/issues`),
+    //  contributors:$.get(`https://api.github.com/repos/${orgName}/${repoName}/contributors`)
+    //
+    //});
+
 
   }
 });

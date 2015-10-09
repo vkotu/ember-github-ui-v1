@@ -10,7 +10,10 @@ model(){
     raw.id = raw.name;
     return raw;
   });
+//debugger;
+//  return this.modelFor('org.repo');
 }
+
 
 
 });
