@@ -10,12 +10,15 @@ Router.map(function() {
     this.route('mike', {});
   });
   this.route('orgs', {}); //orgs/
-  this.route('org', {path:'org/:id'}, function() { //org/emberjs
+  this.route('org', {path:'org/:id'}, function() {
+    //org/emberjs
     this.route('repos', {});
+    //org/jquery/jquery-ui
     this.route('repo', {path:':repoid'}, function() {
       this.route('contributors', {});
       this.route('issues', {});
-    }); //org/jquery/jquery-ui
+    });
+    this.route('notfound', {});
   });
   this.route('notfound', {path:'*path'})
 });

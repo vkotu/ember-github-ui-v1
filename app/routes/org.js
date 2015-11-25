@@ -18,6 +18,17 @@ export default Ember.Route.extend({
     addToRecords(value){
      // alert(`hi ${value}`);
       this.get('authentication.records').addObject({id:value});
+    },
+    error(jqxhr){
+
+      if(jqxhr.status === 404){
+        debugger;
+        this.intermediateTransitionTo('org.notfound');
+      }else{
+        return true; // bubbles up
+      }
+
+
     }
   }
 });

@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   favorites: Ember.inject.service(),
   model(params,transition){
+    //just to test the loading staate , added delay for no good reason
     return new Ember.RSVP.Promise((resolve,reject) => {
       Ember.run.later(() => {
         resolve([
@@ -13,7 +14,7 @@ export default Ember.Route.extend({
           {id: "netflix"},
           {id: "facebook"}
         ]) ;
-      },1000);
+      },500);
     });
 
 },
